@@ -6,9 +6,12 @@
              >
 
     <ScrollView>
-        <VerticalStackLayout
-             Padding="24"
-             Spacing="24">
+        <Grid
+             Padding="24" 
+             RowDefinitions="Auto, Auto, *"
+            ColumnDefinitions="*"
+            RowSpacing="24"
+            >
             <Border
           Stroke="LightGray"
           StrokeThickness="2">
@@ -17,25 +20,40 @@
                     <RoundRectangle
                      CornerRadius="10"/>
                 </Border.StrokeShape>
-                  
-                
-                <VerticalStackLayout>
+
+
+                <Grid
+                    RowDefinitions="*, *"
+                    ColumnDefinitions="Auto, *"
+                    ColumnSpacing="8">
 
                     <Label
+                        Grid.Row="0"
+                        Grid.Column="0"
+                        VerticalOptions="Center"
                        Text="Proporcione el peso en gramos"/>
                     <Entry
+                    Grid.Row="0"
+                    Grid.Column="1"
                     x:Name="PesoEntry"
                     BackgroundColor="WhiteSmoke"
                     MaxLength="10"/>
-                      <Label
-                  Text="Proporcione estatura y metros"/>
+                    <Label
+                        Grid.Row="1"
+                        VerticalOptions="Center"
+                        Grid.Column="0"
+                  Text="Proporcione estatura en metros"/>
                     <Entry
+                        Grid.Row="1"
+                        Grid.Column="1"
                      x:Name="EstaturaEntry"
                      BackgroundColor="WhiteSmoke"/>
-                </VerticalStackLayout>
+                </Grid>
             </Border>
 
             <HorizontalStackLayout
+                Grid.Row="1"
+                Grid.Column="0"
           HorizontalOptions="Center"
           Spacing="24">
 
@@ -52,7 +70,11 @@
                     />
             </HorizontalStackLayout>
 
-            <Border>
+            <Border
+             Grid.Row="2"
+             Grid.Column="0">
+                
+                
                 <VerticalStackLayout>
                     <Label
                         
@@ -76,7 +98,7 @@
 
                 </VerticalStackLayout>
             </Border>
-        </VerticalStackLayout>
+        </Grid>
     </ScrollView>
 
 
