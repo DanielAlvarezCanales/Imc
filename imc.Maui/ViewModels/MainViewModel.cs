@@ -1,6 +1,6 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
-using imc.Maui.Models;
+using imc.Models;
 
 namespace imc.Maui.ViewModels
 {
